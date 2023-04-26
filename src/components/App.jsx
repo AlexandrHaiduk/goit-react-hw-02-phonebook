@@ -15,11 +15,20 @@ export class App extends Component {
     number: '',
   };
 
+  deleteContact = contactId => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+    }));
+  };
+
   render() {
     return (
       <>
         <Phonebook />
-        <Contacts data={this.state.contacts} />
+        <Contacts
+          data={this.state.contacts}
+          onDeleteContact={this.deleteContact}
+        />
       </>
     );
   }
