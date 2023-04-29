@@ -17,17 +17,42 @@ code {
 
 li {
   display: flex;
-  outline: 1px solid red;
   width: 400px;
   gap: 20px;
 }
 
 .delete__button {
   align-self: flex-end;
+  line-height: 1.15;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  align-self: flex-end;
+}
+
+.add__button {
+  margin-top: 20px;
+  width: 100px;
 }
 
 ul {
   margin: 0;
   padding: 0;
   margin-top: 20px;
+}
+
+.error {
+  color: red;
+}
+
+.form {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+}
+
+.filter {
+  margin-left: 10px;
 }
