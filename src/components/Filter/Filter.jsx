@@ -1,3 +1,5 @@
+import css from './styles.module.css';
+
 export const Filter = ({ value, onChangeFilter }) => {
   return (
     <>
@@ -9,7 +11,7 @@ export const Filter = ({ value, onChangeFilter }) => {
         id=""
         value={value}
         onChange={onChangeFilter}
-        className="filter"
+        className={css.filter}
       />
     </>
   );

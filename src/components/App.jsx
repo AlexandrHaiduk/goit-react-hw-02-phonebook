@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Phonebook } from './Phonebook';
-import { Contacts } from './Contacts';
-import { Filter } from './Filter';
+import { Phonebook } from './Phonebook/Phonebook';
+import { Contacts } from './Contacts/Contacts';
+import { Filter } from './Filter/Filter';
 
 export class App extends Component {
   state = {

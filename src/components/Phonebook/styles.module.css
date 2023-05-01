@@ -1,0 +1,17 @@
+.form {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+}
+
+.error {
+  color: red;
+}
+
+.add__button {
+  margin-top: 20px;
+  width: 100px;
+}

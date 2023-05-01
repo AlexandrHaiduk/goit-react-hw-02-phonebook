@@ -1,3 +1,4 @@
+import css from './styles.module.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { nanoid } from 'nanoid';
 import { object, string, number } from 'yup';
@@ -16,8 +17,6 @@ let userSchema = object({
 
 export const Phonebook = ({ addContact }) => {
   const handleFormSubmit = (values, actions) => {
-    console.log(values);
-    console.log(actions);
     addContact({ ...values, id: nanoid() });
     actions.resetForm();
   };
@@ -29,18 +28,18 @@ export const Phonebook = ({ addContact }) => {
         onSubmit={handleFormSubmit}
         validationSchema={userSchema}
       >
-        <Form className="form">
+        <Form className={css.form}>
           <label htmlFor="name">
             <p>Name</p>
             <Field name="name" />
-            <ErrorMessage component="div" className="error" name="name" />
+            <ErrorMessage component="div" className={css.error} name="name" />
           </label>
           <label htmlFor="number">
             <p>Number</p>
             <Field type="tel" name="number" />
-            <ErrorMessage component="div" className="error" name="number" />
+            <ErrorMessage component="div" className={css.error} name="number" />
           </label>
-          <button type="submit" className="add__button">
+          <button type="submit" className={css.add__button}>
             Add contact
           </button>
         </Form>
