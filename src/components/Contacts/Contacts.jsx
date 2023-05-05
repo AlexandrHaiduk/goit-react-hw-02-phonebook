@@ -5,19 +5,17 @@ export const Contacts = ({ data, onDeleteContact }) => {
       <ul>
         {data.map(info => {
           return (
-            <>
-              <li key={info.id} id={info.id}>
-                <p key={info.name}>{info.name}: </p>
-                <p key={info.number}>{info.number}</p>
-                <button
-                  type="button"
-                  className={css.delete__button}
-                  onClick={() => onDeleteContact(info.id)}
-                >
-                  Delete
-                </button>
-              </li>
-            </>
+            <li key={info.id} id={info.id}>
+              <p>{info.name}: </p>
+              <p>{info.number}</p>
+              <button
+                type="button"
+                className={css.delete__button}
+                onClick={() => onDeleteContact(info.id)}
+              >
+                Delete
+              </button>
+            </li>
           );
         })}
       </ul>
